@@ -24,6 +24,14 @@ const routes: Routes = [
     loadChildren: (): Promise<any> =>
       import('./modules/drinks/drinks.module')
         .then((module) => module.DrinksModule)
+  },
+  {
+    path: 'users',
+    canLoad: [AuthGuard],
+    data: { rolesNeeded: 'root'},
+    loadChildren: (): Promise<any> =>
+      import('./modules/users/users.module')
+        .then((module) => module.UsersModule)
   }
   // {
   //   path: '**',
