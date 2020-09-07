@@ -1,0 +1,49 @@
+{
+    "drinks": "bebidas | ES",
+    "Drinks": "listado de bebidas",
+    "yes": "si",
+    "no": "no",
+    "presentation": "presentación",
+    "actions": {
+        "label": "funciones",
+        "create": "agregar",
+        "edit": "modificar",
+        "update": "actualizar",
+        "delete": "eliminar"
+    },
+    "required": "campo requerido",
+    "drink": {
+        "id": "código",
+        "name": "nombre/marca",
+        "alcoholic": "alcohólica",
+        "prepared": "preparada",
+        "type": {
+            "label": "tipo",
+            "carbonated": "gaseosa",
+            "beer": "cerveza",
+            "coffee": "café",
+            "milkshake": "a base de leche",
+            "cocktail": "cóctel",
+            "tea": "tea",
+            "juice": "natural",
+            "whisky": "whisky",
+            "gin": "ginebra",
+            "brandy": "brandy",
+            "wine": "vino",
+            "water": "agua",
+            "rum": "ron",
+            "vodka": "vodka"
+        }
+    },
+    "back": "volver",
+    "Create Drink": "Crear bebida",
+    "Edit Drink": "Editar bebida",
+    "login": {
+        "screen": "Ingreso",
+        "login": "entrar",
+        "username": "usuario",
+        "password": "contraseña",
+        "notallowed": "ud no tiene los permisos requeridos",
+        "logout": "salir"
+    }
+}

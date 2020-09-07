@@ -1,0 +1,170 @@
+{
+  "drinks": [
+    {
+      "name": "Coke Vanilla",
+      "type": "carbonated",
+      "is_alcoholic": false,
+      "is_prepared": false,
+      "acceptance": 4.5,
+      "id": 1,
+      "comments": [
+        {
+          "id": 1,
+          "text": "prefiero esta antes que la cherry zero",
+          "acceptance": 3.5,
+          "user": {
+            "id": 3,
+            "name": "el-patas"
+          }
+        },
+        {
+          "id": 2,
+          "text": "excelente sabor, 5 estrellas",
+          "acceptance": 5,
+          "user": {
+            "id": 5,
+            "name": "roy alacrán"
+          }
+        },
+        {
+          "id": 3,
+          "text": "guacala!",
+          "acceptance": 1,
+          "user": {
+            "id": 7,
+            "name": "she hulk"
+          }
+        },
+        {
+          "id": 4,
+          "text": "sabrosonáh_",
+          "acceptance": 4.5,
+          "user": {
+            "id": 1,
+            "name": "juan contento"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rock Ice Golden Monkey",
+      "type": "beer",
+      "is_alcoholic": true,
+      "is_prepared": false,
+      "acceptance": 2.1
+    },
+    {
+      "id": 3,
+      "name": "Irish Coffee",
+      "type": "coffee",
+      "is_alcoholic": true,
+      "is_prepared": true,
+      "acceptance": 4.7
+    },
+    {
+      "name": "Aguacate Milkshake",
+      "type": "milkshake",
+      "is_alcoholic": false,
+      "is_prepared": true,
+      "acceptance": 5,
+      "id": 5
+    },
+    {
+      "name": "Flaming Homer",
+      "type": "cocktail",
+      "is_alcoholic": true,
+      "is_prepared": true,
+      "acceptance": 3.1,
+      "id": 6
+    },
+    {
+      "name": "Millenial Tea",
+      "type": "tea",
+      "is_alcoholic": false,
+      "is_prepared": true,
+      "acceptance": 2,
+      "id": 7
+    },
+    {
+      "name": "Ciroc",
+      "type": "vodka",
+      "is_alcoholic": true,
+      "is_prepared": false,
+      "acceptance": 1.5,
+      "id": 8
+    },
+    {
+      "name": "Buchanan's",
+      "type": "wisky",
+      "is_alcoholic": true,
+      "is_prepared": false,
+      "acceptance": 1,
+      "id": 9
+    },
+    {
+      "name": "Bombay Sapphire",
+      "type": "gin",
+      "is_alcoholic": true,
+      "is_prepared": false,
+      "acceptance": 4.1,
+      "id": 10
+    },
+    {
+      "name": "Torres 10",
+      "type": "brandy",
+      "is_alcoholic": true,
+      "is_prepared": false,
+      "acceptance": 4,
+      "id": 11
+    },
+    {
+      "name": "Concha Toro",
+      "type": "wine",
+      "is_alcoholic": true,
+      "is_prepared": false,
+      "acceptance": 4.5,
+      "id": 12
+    },
+    {
+      "name": "Welch's",
+      "type": "juice",
+      "is_alcoholic": false,
+      "is_prepared": false,
+      "acceptance": 2,
+      "id": 13
+    },
+    {
+      "name": "Sirope Zarza",
+      "type": "water",
+      "is_alcoholic": false,
+      "is_prepared": true,
+      "acceptance": 5,
+      "id": 14
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Pipoh",
+      "lastname": "Ku",
+      "roles": "superuser",
+      "username": "root",
+      "password": "passw",
+      "token": "qwertyuiop"
+    },
+    {
+      "id": 2,
+      "firstname": "Pedro",
+      "lastname": "Garita",
+      "roles": "none",
+      "username": "1",
+      "password": "1",
+      "token": "qwertyuiop"
+    }
+  ],
+  "login": {
+    "token": "qwertyuiop",
+    "userId": "1"
+  }
+}

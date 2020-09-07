@@ -1,0 +1,60 @@
+<div class="modal-header">
+    <div class="modal-title" id="modal-title">{{beHeader}}</div>
+    <button class="close" aria-label="close" (click)="closeModal();">
+        <span aria-hidden="true" class="btn btn-outline-danger">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="form" (ngSubmit)="createEditDrink()">
+        <div class="form-group">
+            <label for="name">{{ "drink.name" | translate }}</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Jack Daniel's" formControlName="name" [ngClass]="{ 'is-invalid': !isFieldValid('name') }">
+            <span class="invalid-feedback" *ngIf="!isFieldValid('name')">*{{ "required" | translate }}</span>
+        </div>
+        <div class="form-group">
+            <label for="type">{{ "drink.type.label" | translate }}</label>
+            <select name="type" id="type" formControlName="type" class="form-control" [ngClass]="{ 'is-invalid': !isFieldValid('name') }">
+                <option value="water">{{ "drink.type.water" | translate }}</option>
+                <option value="milkshake">{{ "drink.type.milkshake" | translate }}</option>
+                <option value="coffee">{{ "drink.type.coffee" | translate }}</option>
+                <option value="tea">{{ "drink.type.tea" | translate }}</option>
+                <option value="juice">{{ "drink.type.juice" | translate }}</option>
+                <option value="carbonated">{{ "drink.type.carbonated" | translate }}</option>
+                <option value="beer">{{ "drink.type.beer" | translate }}</option>
+                <option value="brandy">{{ "drink.type.brandy" | translate }}</option>
+                <option value="gin">{{ "drink.type.gin" | translate }}</option>
+                <option value="rum">{{ "drink.type.rum" | translate }}</option>
+                <option value="vodka">{{ "drink.type.vodka" | translate }}</option>
+                <option value="wine">{{ "drink.type.wine" | translate }}</option>
+                <option value="whisky">{{ "drink.type.whisky" | translate }}</option>
+                <option value="cocktail">{{ "drink.type.cocktail" | translate }}</option>
+            </select>
+            <span class="invalid-feedback" *ngIf="!isFieldValid('name')">*{{ "required" | translate }}</span>
+        </div>
+        <input type="number" name="acceptance" id="acceptance" formControlName="acceptance" hidden>
+        <div class="col-6 d-inline text-capitalized">{{ "drink.alcoholic" | translate }}</div>
+        <div class="col-6 d-inline text-capitalized">{{ "presentation" | translate }}</div>
+        <div class="form-group">
+            <div class="col-5 form-control form-control-x">                
+                <label ngbButtonLabel class="form-check-inline">
+                    <input ngbButton type="radio" class="mr-1" [value]="true" name="is_alcoholic" id="is_alcoholic" formControlName="is_alcoholic">{{ "yes" | translate }}
+                </label>
+                <label ngbButtonLabel class="form-check-inline">
+                    <input ngbButton type="radio" class="mr-1" [value]="false" name="is_alcoholic" id="is_alcoholic" formControlName="is_alcoholic">{{ "no" | translate }}
+                </label>
+            </div>
+            <div class="offset-1 col-6 form-control form-control-x">
+                <label ngbButtonLabel class="form-check-inline text-right">
+                    <input ngbButton type="radio" class="mr-1" [value]="false" name="is_prepared" id="is_prepared" formControlName="is_prepared">industrial
+                </label>
+                <label ngbButtonLabel class="form-check-inline text-right">
+                    <input ngbButton type="radio" class="mr-1" [value]="true" name="is_prepared" id="is_prepared" formControlName="is_prepared">{{ "drink.prepared" | translate }}
+                </label>
+            </div>
+        </div>
+
+        <div class="footer-actions text-right">
+            <button type="submit" class="btn btn-outline-success">{{doAction}}</button>
+        </div>
+    </form>
+</div>

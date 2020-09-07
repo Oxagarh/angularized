@@ -1,0 +1,45 @@
+<div class="container bg-light">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="modal-title text-center">{{ "Drinks" | translate}}</h1>
+        </div>
+        <div class="col-12">
+            <table class="table bg-white border border-dark table-borderless table-hover">
+                <thead>
+                    <tr class="border-bottom">
+                        <th>{{ "drink.id" | translate }}</th>
+                        <th>{{ "drink.name" | translate }}</th>
+                        <th>{{ "drink.type.label" | translate }}</th>
+                        <th class="text-center">{{ "drink.alcoholic" | translate }}</th>
+                        <th class="text-center">{{ "drink.prepared" | translate }}</th>
+                        <th>{{ "actions.label" | translate }}</th>
+                        <th>
+                            <button type="button" class="btn btn-outline-success" (click)="createDrink()">{{ "actions.create" | translate }}</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let drink of list">
+                        <td>{{ drink.id }}</td>
+                        <td><a [routerLink]="[drink.id]" class="underlined">{{ drink.name }}</a></td>
+                        <td>{{ drink.type }}</td>
+                        <td class="text-center">{{ drink.is_alcoholic | html }}</td>
+                        <td class="text-center">{{ drink.is_prepared | html }}</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-info" (click)="editDrink(drink)">{{ "actions.edit" | translate }}</button>
+                        </td>
+                        <td>
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger"
+                                (click)="confirmDeleteModal(drink)"
+                            >
+                                {{ "actions.delete" | translate }}
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

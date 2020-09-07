@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-12 d-inline text-right">
+        <a routerLink="/drinks">&lsaquo; {{ "back" | translate }}</a>
+    </div>
+    <div class="row col-12">
+        <div class="offset-3 col-2 card-p xbox left">
+            <img src="assets/images/{{drink.type}}.svg" alt="logo" class="card-ch">
+        </div>
+        <div class="col-4">
+            <div class="row xbox right pl-20">
+                <div class="col-12 d-inline">
+                    <h3 class="modal-title">{{ drink.name }}</h3>
+                </div>
+                <div class="col-12">
+                    <span [outerHTML]="drink.is_alcoholic | alcohol"></span>
+                </div>
+                <div class="col-12">
+                    <span [outerHTML]="drink.is_prepared | preparation"></span>
+                </div>
+                <div class="col-12">
+                    <bar-rating [(rate)]="drink.acceptance" [max]="5" [readOnly] [theme]="'stars'" [showText]="false" class="fake"></bar-rating>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" *ngFor="let comment of drink.comments">
+        <h-comment-box [comment]="comment"></h-comment-box>
+    </div>
+</div>

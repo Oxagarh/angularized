@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularized": {
+    "noneh": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "none",
+      "prefix": "h",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularized",
+            "outputPath": "dist/noneh",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularized:build"
+            "browserTarget": "noneh:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularized:build:production"
+              "browserTarget": "noneh:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularized:build"
+            "browserTarget": "noneh:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularized:serve"
+            "devServerTarget": "noneh:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularized:serve:production"
+              "devServerTarget": "noneh:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angularized"
+  "defaultProject": "noneh"
 }

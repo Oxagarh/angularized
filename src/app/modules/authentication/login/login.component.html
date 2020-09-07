@@ -1,0 +1,29 @@
+<div class="container bg-light">
+    <div class="row justify-content-center bordered">
+        <div class="col-12">
+            <h1 class="modal-title text-center">{{ "login.screen" | translate }}</h1>
+
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="offset-4 col-4">
+                <div class="form-group">
+                    <label for="username">{{ "login.username" | translate }}</label>
+                    <input type="text" name="email" id="email" class="form-control" value="root"
+                        [(ngModel)]="credentials.username" #email="ngModel" required />
+                    <p class="error text-danger" *ngIf="submitted && email.errors?.required">*{{ "required" | translate }}</p>
+                </div>
+                <div class="form-group">
+                    <label for="password">{{ "login.password" | translate }}</label>
+                    <input type="password" name="password" id="password" class="form-control" value="passw"
+                        [(ngModel)]="credentials.password" #password="ngModel" required />
+                    <p class="error text-danger" *ngIf="submitted && password.errors?.required">*{{ "required" | translate }}</p>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-outline-dark">{{ "login.login" | translate }}</button>
+                </div>
+                <div *ngIf="err">
+                    <p class="error text-danger">{{ err }}</p>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>

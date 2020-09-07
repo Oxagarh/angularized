@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Bootstrap stars [theme]="'stars'" */
+@import '~ngx-bar-rating/themes/br-stars-theme';
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.br{
+    margin: 8px 0px !important;
+    width: 40%;
+}
+
+.comment {
+    .br {
+        display: inline-block;
+        margin: 0px !important;
+        .br-units {
+            width: 100%;
+        }
+    }
+}

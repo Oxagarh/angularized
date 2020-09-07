@@ -1,0 +1,46 @@
+.modal-title {
+    color: #212529;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.d-inline {
+    display: inline-block !important;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+
+.card-p{
+    height: 100%;
+    padding: 0px 0px 0px 24px;
+    .card-ch{
+        padding: 0px 44px 0px 20px;
+        display: inline-block;
+        height: inherit;
+    }
+}
+
+.pl-20 {
+    padding-left: 20px !important;
+}
+
+.xbox {
+    background-color: #fff;
+    border: 1px solid;
+    box-shadow: 0px 4px 4px 0px #ccc;
+}
+
+.left {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.right {
+    border-left: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
