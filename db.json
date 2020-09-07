@@ -151,8 +151,8 @@
       "firstname": "juan",
       "lastname": "contento",
       "roles": "superuser",
-      "username": "root",
-      "password": "passw",
+      "username": "1",
+      "password": "1",
       "token": "qwertyuiop"
     },
     {
@@ -160,8 +160,8 @@
       "firstname": "Pedro",
       "lastname": "Garita",
       "roles": "any",
-      "username": "1",
-      "password": "1",
+      "username": "2",
+      "password": "2",
       "token": "qwertyuiop"
     }
   ],
