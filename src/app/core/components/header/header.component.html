@@ -10,12 +10,12 @@
                 <li class="list-item nav-item mx-4 bt">
                     <a href="/drinks">{{ "drinks" | translate }}</a>
                 </li>
-                <li class="list-item nav-item mx-4 bt" *ngIf="permissions.hasRole('root')">
+                <li class="list-item nav-item mx-4 bt" *ngIf="permissions.hasRole('superuser')">
                     <a href="/users">{{ "users" | translate }}</a>
                 </li>
             </ul>
         </div>
-        <div class="col-3 flex-centered text-center">
+        <div class="col-3 flex-centered text-center" *ngIf="isLoggedIn">
             <span>&#9785; </span><a routerLink="/users/{{user.id}}" class="font-weight-bold text-uppercase font-italic">{{ user.firstname+" "+user.lastname}}</a>
             <button type="button" class="btn fa" (click)="logout()">logout</button>
         </div>

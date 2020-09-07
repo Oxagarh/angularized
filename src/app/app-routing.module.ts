@@ -28,7 +28,7 @@ const routes: Routes = [
   {
     path: 'users',
     canLoad: [AuthGuard],
-    data: { rolesNeeded: 'root'},
+    data: { rolesNeeded: 'superuser'},
     loadChildren: (): Promise<any> =>
       import('./modules/users/users.module')
         .then((module) => module.UsersModule)
