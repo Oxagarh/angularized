@@ -20,7 +20,7 @@ const routes: Routes = [
   {
     path: 'drinks',
     canLoad: [AuthGuard],
-    data: { rolesNeeded: 'root'},
+    data: { rolesNeeded: 'any'},
     loadChildren: (): Promise<any> =>
       import('./modules/drinks/drinks.module')
         .then((module) => module.DrinksModule)

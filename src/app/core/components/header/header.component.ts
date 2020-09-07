@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication/authentication.service';
 import { EventsHubService } from '../../services/events-hub/events-hub.service';
+import { PermissionsService } from './../../services/permissions/permissions.service';
 
 @Component({
   selector: 'h-header',
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private authentication: AuthenticationService,
-    private eventHub: EventsHubService
+    private eventHub: EventsHubService,
+    public permissions: PermissionsService
   ) { }
 
   ngOnInit(): void {

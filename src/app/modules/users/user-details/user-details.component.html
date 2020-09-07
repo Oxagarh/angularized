@@ -1,1 +1,10 @@
-<p>user-details works!</p>
+<div class="container bg-light bordered" *ngIf="user">
+    <div class="row">
+        <div class="offset-5 col-4 d-inline">
+            <div class="col-12">id: {{user.id}}</div>
+            <div class="col-12">name: {{user.firstname}} {{user.lastname}}</div>
+            <div class="col-12">username: {{user.username}}</div>
+            <div class="col-12">roles: {{user.roles}}</div>
+        </div>
+    </div>
+</div>

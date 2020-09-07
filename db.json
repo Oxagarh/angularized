@@ -18,15 +18,6 @@
           }
         },
         {
-          "id": 2,
-          "text": "excelente sabor, 5 estrellas",
-          "acceptance": 5,
-          "user": {
-            "id": 5,
-            "name": "roy alacrán"
-          }
-        },
-        {
           "id": 3,
           "text": "guacala!",
           "acceptance": 1,
@@ -76,7 +67,18 @@
       "is_alcoholic": true,
       "is_prepared": true,
       "acceptance": 3.1,
-      "id": 6
+      "id": 6,
+      "comments": [
+        {
+          "id": 2,
+          "text": "excelente sabor, 5 estrellas",
+          "acceptance": 5,
+          "user": {
+            "id": 1,
+            "name": "juan contento"
+          }
+        }
+      ]
     },
     {
       "name": "Millenial Tea",
@@ -146,8 +148,8 @@
   "users": [
     {
       "id": 1,
-      "firstname": "Pipoh",
-      "lastname": "Ku",
+      "firstname": "juan",
+      "lastname": "contento",
       "roles": "superuser",
       "username": "root",
       "password": "passw",
@@ -157,7 +159,7 @@
       "id": 2,
       "firstname": "Pedro",
       "lastname": "Garita",
-      "roles": "none",
+      "roles": "any",
       "username": "1",
       "password": "1",
       "token": "qwertyuiop"
